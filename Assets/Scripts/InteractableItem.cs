@@ -1,14 +1,13 @@
 using UnityEngine;
 using System.Collections;
-using UnityEngine.UI;
 
-public class InteractableItem : IInteractableItem
+public class InteractableItem : MonoBehaviour
 {
 	public GameObject Item2D;
 	public bool isCollectable; 
 
 
-	public override void SetCollected(bool value) {
+	public void SetCollected(bool value) {
 		_collected = value;
 		gameObject.SetActive (!value);
 	}
